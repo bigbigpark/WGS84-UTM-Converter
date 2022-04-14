@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(wgs84_to_utm)
 
 add_compile_options(-std=c++14)
-set(GeographicLib_DIR /home/scpark/tools/geographic/lib/cmake/GeographicLib)
+#set(GeographicLib_DIR /home/scpark/tools/geographic/lib/cmake/GeographicLib)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
