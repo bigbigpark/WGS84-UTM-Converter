@@ -1,0 +1,9 @@
+<launch>
+  <!-- Default setting: UTM 52N in South Korea -->
+  <param name="utm_zone" type="int" value="52" />
+  
+  <!-- Hemishpere setting: if your country is on North, set it as true, vice versa -->
+  <param name="hemisphere" type="bool" value="true" />  
+  
+  <node pkg="wgs84_to_utm" type="wgs84_to_utm_converter" name="wgs84_to_utm_converter" output="screen" />
+</launch>
