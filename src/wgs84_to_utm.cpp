@@ -22,7 +22,7 @@ int main(int argc, char** argv)
   if (nh.getParam("utm_zone", utm_zone))
   if (nh.getParam("hemisphere", hemi));
 
-  cout << "You selected utm zone as [" << utm_zone << "]" << endl;
+  ROS_INFO("You selected utm zone as %d", utm_zone);
 
   GpsConverter GC(6378137, 1/298.257223563, utm_zone, hemi);
   GC.init(nh);

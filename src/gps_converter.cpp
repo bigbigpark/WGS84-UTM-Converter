@@ -75,9 +75,11 @@ void GpsConverter::gps_callback(const sensor_msgs::NavSatFix::ConstPtr& msg)
   set_utm_y(n);
 
   // Print Current position in utm format:
-  cout << fixed << setprecision(9);
-  cout << "utm_x:  " << get_utm_x() << endl;
-  cout << "utm_y:  " << get_utm_y() << endl;
+  cout << fixed << setprecision(9) << "---\n";
+  cout << " lat   : " << msg->longitude << endl;
+  cout << " lon   : " << msg->latitude << endl;
+  cout << " utm_x : " << get_utm_x() << endl;
+  cout << " utm_y : " << get_utm_y() << endl;
 
   path_msgs_.header.stamp = ros::Time::now();
 
